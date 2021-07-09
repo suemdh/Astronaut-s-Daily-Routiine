@@ -32,7 +32,7 @@ function draw() {
   text("Left Arrow = Eating",250,125)
   text("Right Arrow = Bathing",250,155)
   text("r key = Gymming2",250,185)
-  
+  text("e key = Moving",250,215)
   textSize(35);
   text("Instructions:",250,25)
 
