@@ -7,7 +7,7 @@ eat=loadAnimation("eat1.png","eat2.png");
 gym=loadAnimation("gym1.png","gym2.png",);
 gym2=loadAnimation("gym11.png","gym12.png")
 sleep=loadAnimation("sleep.png");
-move=loadAnimation("move.png","move1.png");
+move=loadImage("move.png","move1.png");
 }
 
 
@@ -32,14 +32,20 @@ function draw() {
   text("Left Arrow = Eating",250,125)
   text("Right Arrow = Bathing",250,155)
   text("r key = Gymming2",250,185)
-  text("e key = Moving",250,215)
+  
   textSize(35);
   text("Instructions:",250,25)
 
   edges= createEdgeSprites();
    astronaut .collide(edges);
 
-
+   if(keyDown("e")){
+    astronaut.addImage("move",move)
+    astronaut.changeImage("move")
+    astronaut.y=225
+    astronaut.velocityX=0;
+    astronaut.velocityY=0;
+   }
 
    if(keyDown("r")){
     astronaut.addAnimation("gymming2",gym2)
